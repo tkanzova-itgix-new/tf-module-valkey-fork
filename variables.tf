@@ -27,6 +27,7 @@ variable "product_name" {
 variable "vpc_id" {
   type        = string
   description = "VPC to be used by Elasticache Redis cluster"
+  default     = ""
 }
 
 variable "subnet_ids" {
@@ -41,6 +42,7 @@ variable "subnet_ids" {
 
 variable "redis_allowed_security_group_ids" {
   type = list(string)
+  default = []
 }
 
 variable "snapshot_time" {
