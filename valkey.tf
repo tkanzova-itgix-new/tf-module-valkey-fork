@@ -75,6 +75,10 @@ resource "aws_security_group" "valkey_sg" {
   tags = {
     Name = "valkey-serverless-sg"
   }
+
+  lifecycle {
+    ignore_changes = [tags]
+  }
 }
 
 module "valkey_additional_secrets" {
